@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d639c84c74b648f49918540a635ac7c0
+timeCreated: 1506204014
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - bulletPrefab: {fileID: 1719459430794688, guid: b4e81e126f65a2f40bd8e6ac91304be2,
+      type: 2}
+  - bulletSpawn: {fileID: 4352923816812066, guid: f8e096d3196ce6d408c6b9050d26e32a,
+      type: 2}
+  - bulletSpawn1: {fileID: 4538541689113460, guid: 66d6fa8e4bd72554995e1836772203e2,
+      type: 2}
+  - bulletSpawn2: {fileID: 4904020474621626, guid: 989ee223b30bd6d45aaf143334657246,
+      type: 2}
+  - bulletSpawn3: {fileID: 4655223250600338, guid: f94151da676c4df47803ba53fd1e6fc4,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
