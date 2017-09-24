@@ -8,6 +8,7 @@ public class Key : MonoBehaviour {
 	int num1;
 	int num2;
 	int num3;
+	string num;
 	public ButtonMagnet b1;
 	public ButtonMagnet b2;
 	public ButtonMagnet b3;
@@ -20,19 +21,16 @@ public class Key : MonoBehaviour {
 		int num1 = Random.Range (0, 10);
 		int num2 = Random.Range (0, 10);
 		int num3 = Random.Range (0, 10);
+		num = num1 + num2 + num3;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (b1.text.equals (num1)) {
-			if (b2.text.equals(num2)) {
-				if (b2.text.equals(num3) {
-					foundKey = true;
-					renderer.enabled = true;
-					this.gameObject.GetComponent (MeshRenderer).enabled = true; 
-				}
-			}
+		string combo = b1.text + b2.text + b3.text;
+		if (num.Equals (combo)) {
+			foundKey = true;
+			renderer.enabled = true;
+			//this.gameObject.GetComponent (MeshRenderer).enabled = true;
 		}
-
 	}
 }
