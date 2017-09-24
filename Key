@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Key : MonoBehaviour {
+
+	bool foundKey;
+	int num1;
+	int num2;
+	int num3;
+	public ButtonMagnet b1;
+	public ButtonMagnet b2;
+	public ButtonMagnet b3;
+
+	// Use this for initialization
+	void Start () {
+		foundKey = false;
+		renderer.enabled = false;
+		//this.gameObject.GetComponent (MeshRenderer).enabled = false;
+		int num1 = Random.Range (0, 10);
+		int num2 = Random.Range (0, 10);
+		int num3 = Random.Range (0, 10);
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (b1.text.equals (num1)) {
+			if (b2.text.equals(num2)) {
+				if (b2.text.equals(num3) {
+					foundKey = true;
+					renderer.enabled = true;
+					this.gameObject.GetComponent (MeshRenderer).enabled = true; 
+				}
+			}
+		}
+
+	}
+}
