@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Health : MonoBehaviour {
+
+	//public RectTransform healthBar;				//healthbar
+
+	public const int maxHealth = 100;			//max health
+
+	public bool toBeDestroyed;					//Should be taken as an input for diff things, like for enemies and stuff
+
+	//[SyncVar(hook = "OnChangeHealth")]			//making sure health syncs across server, look more into hooks
+	public int currentHealth = maxHealth;		//setting up initial health
+
+	public void TakeDamage(int amount)
+	{
+		/*if (!isServer) {						//damage aplied only to server so that clients do not double damage and re-add that, i.e., to make sure that there is no discrepance in health bars
+			return;
+		}*/
+		currentHealth -= amount;
+		if (currentHealth <= 0) {
+			currentHealth = maxHealth;
+			if (toBeDestroyed) {
+				Destroy (gameObject);
+			}
+			Debug.Log ("Dead");
+		}
+	}
+}
